@@ -1,0 +1,146 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-header);
+    padding: 1.25rem 0;
+    transition: all var(--transition);
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.875rem 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 46px;
+    filter: drop-shadow(0 0 10px var(--red-glow));
+}
+
+.logoText {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: var(--text-white);
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navLink {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+    transition: color var(--transition);
+    position: relative;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: var(--red-primary);
+    transition: width var(--transition);
+}
+
+.navLink:hover {
+    color: var(--text-white);
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.menuBtn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.menuBtn span {
+    width: 20px;
+    height: 1.5px;
+    background: var(--text-white);
+    transition: all var(--transition);
+}
+
+.menuBtn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 3px);
+}
+
+.menuBtn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menuBtn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .menuBtn {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        inset: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background: rgba(0, 0, 0, 0.98);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition);
+    }
+
+    .nav.navOpen {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navLink {
+        font-size: 1.25rem;
+    }
+
+    .logoText {
+        display: none;
+    }
+}

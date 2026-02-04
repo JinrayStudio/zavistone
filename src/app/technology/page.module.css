@@ -1,0 +1,144 @@
+.page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-24) 0 var(--space-16);
+    background: linear-gradient(180deg, #0a0a0a 0%, var(--color-black) 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--text-hero);
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+    max-width: 500px;
+}
+
+/* Sections */
+.section {
+    padding: var(--space-20) 0;
+    background: var(--color-black);
+}
+
+.sectionTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-12);
+}
+
+/* Tech Grid */
+.techGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.techCard {
+    padding: var(--space-8);
+    background: var(--color-charcoal);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.techCard:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.techIcon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-4);
+}
+
+.techIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.techCard h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+}
+
+.techCard p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Capabilities Section */
+.capSection {
+    padding: var(--space-20) 0;
+    background: var(--color-charcoal);
+}
+
+.capList {
+    max-width: 800px;
+}
+
+.capItem {
+    display: flex;
+    gap: var(--space-6);
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.capItem:last-child {
+    border-bottom: none;
+}
+
+.capNumber {
+    font-family: var(--font-serif);
+    font-size: var(--text-2xl);
+    font-weight: 500;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    width: 60px;
+}
+
+.capContent h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.capContent p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .techGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .capItem {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    .capNumber {
+        width: auto;
+    }
+}

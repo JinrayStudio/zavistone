@@ -1,0 +1,161 @@
+.page {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-24) 0 var(--space-16);
+    background: linear-gradient(180deg, var(--color-charcoal) 0%, var(--color-black) 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: var(--text-hero);
+    font-weight: 500;
+    margin-bottom: var(--space-4);
+}
+
+.subtitle {
+    font-size: var(--text-xl);
+    color: var(--color-text-muted);
+    max-width: 500px;
+}
+
+/* Investment Thesis */
+.thesis {
+    padding: var(--space-20) 0;
+    background: var(--color-black);
+}
+
+.thesisContent {
+    max-width: 900px;
+}
+
+.thesisTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-6);
+}
+
+.thesisText {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-12);
+}
+
+.focusAreas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-8);
+}
+
+.focusArea {
+    padding: var(--space-6);
+    background: var(--color-charcoal);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition-fast);
+}
+
+.focusArea:hover {
+    border-color: var(--color-accent);
+}
+
+.focusIcon {
+    display: block;
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    margin-bottom: var(--space-4);
+}
+
+.focusArea h3 {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.focusArea p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Projects Section */
+.projects {
+    padding: var(--space-20) 0;
+    background: var(--color-charcoal);
+}
+
+.sectionTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-12);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-8);
+}
+
+/* Partnership CTA */
+.partnership {
+    padding: var(--space-24) 0;
+    background: var(--color-black);
+}
+
+.partnerContent {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.partnerTitle {
+    font-family: var(--font-serif);
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+}
+
+.partnerText {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-8);
+}
+
+.partnerBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) var(--space-10);
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+}
+
+.partnerBtn:hover {
+    background: var(--color-accent);
+    color: var(--color-text-primary);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

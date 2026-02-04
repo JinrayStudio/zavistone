@@ -1,0 +1,287 @@
+.main {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+    color: #fff;
+}
+
+/* Login Styles */
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loginBox {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.loginTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.redDot {
+    color: #dc2626;
+}
+
+.loginSubtitle {
+    color: #666;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.passwordInput {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    transition: border-color 0.2s;
+}
+
+.passwordInput:focus {
+    outline: none;
+    border-color: #dc2626;
+}
+
+.loginBtn {
+    background: #dc2626;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.loginBtn:hover {
+    background: #b91c1c;
+}
+
+.loginBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+}
+
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.headerTitle {
+    color: #666;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.titleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.newBtn {
+    background: #dc2626;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background 0.2s;
+}
+
+.newBtn:hover {
+    background: #b91c1c;
+}
+
+/* Post List */
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.postItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.postItem:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.postInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.postName {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.viewLink {
+    color: #666;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.viewLink:hover {
+    color: #dc2626;
+}
+
+.postActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editBtn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.editBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.deleteBtn {
+    background: transparent;
+    color: #666;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.deleteBtn:hover {
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+.deleteBtn.confirm {
+    background: #dc2626;
+    color: #fff;
+    border-color: #dc2626;
+}
+
+/* States */
+.loading {
+    text-align: center;
+    color: #666;
+    padding: 4rem;
+}
+
+.empty {
+    text-align: center;
+    color: #666;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .postItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .postActions {
+        width: 100%;
+    }
+
+    .editBtn,
+    .deleteBtn {
+        flex: 1;
+        text-align: center;
+    }
+
+    .titleRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
